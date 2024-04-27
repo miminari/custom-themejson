@@ -1,0 +1,11 @@
+{
+    "core": "WordPress/WordPress",
+    "plugins": [ "." ],
+    "env": {
+        "tests": {
+            "phpVersion": "8.1"
+        }
+    },
+    "port": 8989,
+    "testsPort": 8990
+}

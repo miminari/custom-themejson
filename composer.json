@@ -1,0 +1,42 @@
+{
+    "name": "mimi/custom-theme-json",
+    "description": "",
+    "keywords": [
+        "wordpress"
+    ],
+    "type": "wordpress-plugin",
+    "homepage": "https://github.com/mimi/custom-theme-json",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Matt Cohen",
+            "homepage": "https://matty.blog/"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/mimi/custom-theme-json/issues",
+        "source": "https://github.com/mimi/custom-theme-json/"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "*",
+        "object-calisthenics/phpcs-calisthenics-rules": "*",
+        "phpcompatibility/php-compatibility": "*",
+        "wp-coding-standards/wpcs": "*",
+        "phpunit/phpunit": "^8",
+        "yoast/phpunit-polyfills": "^2.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "composer/installers": true
+        }
+    },
+    "scripts": {
+        "install-codestandards": [
+            "PHPCSStandards\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
+        ],
+        "post-install-cmd": [
+            "@install-codestandards"
+        ]
+    }
+}
