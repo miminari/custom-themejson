@@ -1,5 +1,5 @@
 <?php
-namespace mimi\CustomThemeJSON;
+namespace miminari\CustomThemeJSON;
 
 defined( 'WPINC' ) || die();
 

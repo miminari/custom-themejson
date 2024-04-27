@@ -1,11 +1,11 @@
 {
-    "name": "mimi/custom-theme-json",
+    "name": "miminari/custom-theme-json",
     "description": "",
     "keywords": [
         "wordpress"
     ],
     "type": "wordpress-plugin",
-    "homepage": "https://github.com/mimi/custom-theme-json",
+    "homepage": "https://github.com/miminari/custom-theme-json",
     "license": "GPL-2.0+",
     "authors": [
         {
@@ -14,8 +14,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/mimi/custom-theme-json/issues",
-        "source": "https://github.com/mimi/custom-theme-json/"
+        "issues": "https://github.com/miminari/custom-theme-json/issues",
+        "source": "https://github.com/miminari/custom-theme-json/"
     },
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "*",

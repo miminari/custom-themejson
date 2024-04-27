@@ -4,7 +4,7 @@
  * Plugin URI:
  * Description: Custom ThemeJSON
  * Version: 0.0.1
- * Author: mimi
+ * Author: miminari
  * Author URI:
  * Requires at least: 6.5.0
  * Tested up to: 6.5.0
@@ -13,21 +13,21 @@
  * Domain Path: /languages/
  *
  * @package Custom_ThemeJSON
- * @author mimi
+ * @author miminari
  */
 
-namespace mimi\CustomThemeJSON;
+namespace miminari\CustomThemeJSON;
 
 defined( 'WPINC' ) || die();
 
-if ( ! class_exists( '\mimi\CustomThemeJSON\Resister' ) ) {
+if ( ! class_exists( '\miminari\CustomThemeJSON\Resister' ) ) {
 
 	define( 'CTJSN_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 	define( 'CTJSN_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 
 	// TODO make activation check.
 	if (!wp_theme_has_theme_json()) {
-		var_dump( 'Theme does not support theme.json' );
+		wp_die( 'Theme does not support theme.json' );
 	}
 
 	require_once __DIR__ . '/inc/custom-post-type.php';
@@ -35,7 +35,7 @@ if ( ! class_exists( '\mimi\CustomThemeJSON\Resister' ) ) {
 	require_once __DIR__ . '/inc/user-interface.php';
 
 	// Register variables and the custom post type.
-	\mimi\CustomThemeJSON\CustomPostType::register();
+	\miminari\CustomThemeJSON\CustomPostType::register();
 
 	// Add the admin pages.
 	add_action(
@@ -44,11 +44,4 @@ if ( ! class_exists( '\mimi\CustomThemeJSON\Resister' ) ) {
 			new UserInterface();
 		}
 	);
-
-	// Temporary: Override the theme.json file with custom settings.
-	// \WordCamp\CustomThemeJSON\ThemeJSON::override( __DIR__ . '/test/custom-theme.json');
-	// new \WordCamp\CustomThemeJSON\ThemeJSON();
-
-	//  $theme_json_file = \WordCamp\CustomThemeJSON\ThemeJSON::get_current_theme_json();
-	//  var_dump($theme_json_file);
 }
