@@ -30,12 +30,12 @@ if ( ! class_exists( '\miminari\CustomThemeJSON\Resister' ) ) {
 		wp_die( 'Theme does not support theme.json' );
 	}
 
-	require_once __DIR__ . '/inc/custom-post-type.php';
-	require_once __DIR__ . '/inc/theme-json.php';
-	require_once __DIR__ . '/inc/user-interface.php';
+	// require_once __DIR__ . '/classes/class-customposttype.php';
+	require_once __DIR__ . '/classes/class-themejson.php';
+	require_once __DIR__ . '/classes/class-userinterface.php';
 
 	// Register variables and the custom post type.
-	\miminari\CustomThemeJSON\CustomPostType::register();
+	// \miminari\CustomThemeJSON\CustomPostType::register();
 
 	// Add the admin pages.
 	add_action(
